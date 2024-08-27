@@ -61,7 +61,7 @@ async function setCustomStatus() {
 
     const amount = await getRemainedToken();
 
-    client.user.setActivity(`${amount} hits of $TOKE left`, { type: 4 })
+    client.user.setActivity(`${amount.toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} hits of $TOKE left`, { type: 4 })
 }
 
 
